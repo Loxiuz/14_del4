@@ -17,19 +17,4 @@ public class Die
         m_faces = faces;
     }
 
-    /**
-     * Rolls the dice.
-     *
-     * @return Value of the dice.
-     */
-    public int rollDice()
-    {
-        m_showingFace = (int) (Math.random() * m_faces) + 1;
-        return m_showingFace;
-    }
-
-    public int getShowingFace()
-    {
-        return m_showingFace;
-    }
 }

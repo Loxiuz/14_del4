@@ -1,5 +1,3 @@
-package test;
-
 import game.Dice;
 import org.junit.Test;
 

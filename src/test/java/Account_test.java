@@ -1,5 +1,3 @@
-package test;
-
 import game.*;
 import gui_fields.GUI_Player;
 import org.junit.Test;

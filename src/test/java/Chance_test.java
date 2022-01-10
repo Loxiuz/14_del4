@@ -1,5 +1,3 @@
-package test;
-
 import fields.Field_Chance;
 import fields.Field_Ownable;
 import game.Player;

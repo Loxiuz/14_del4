@@ -1,5 +1,3 @@
-package test;
-
 import fields.Field_Jail;
 import fields.Field_Ownable;
 import fields.Field_Parking;

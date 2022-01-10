@@ -1,5 +1,3 @@
-package test;
-
 import game.*;
 import org.junit.Test;
 

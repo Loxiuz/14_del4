@@ -1,5 +1,3 @@
-package test;
-
 import game.GUIController;
 import gui_main.GUI;
 import org.junit.Test;

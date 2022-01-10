@@ -35,6 +35,26 @@ public class Field_Chance extends Field {
                 GUIController.getInstance().displayChanceCard();
                 case3(player); // Receive 2$ from the bank
                 break;
+            case 4:
+                GUIController.getInstance().setChanceCard(Language.getLine("card4"));
+                GUIController.getInstance().displayChanceCard();
+                case4(player);
+            case 5:
+                GUIController.getInstance().setChanceCard(Language.getLine("card5"));
+                GUIController.getInstance().displayChanceCard();
+                case5(player);
+            case 6:
+                GUIController.getInstance().setChanceCard(Language.getLine("card6"));
+                GUIController.getInstance().displayChanceCard();
+                case6(player);
+            case 7:
+                GUIController.getInstance().setChanceCard(Language.getLine("card7"));
+                GUIController.getInstance().displayChanceCard();
+                case7(player);
+            case 8:
+                GUIController.getInstance().setChanceCard(Language.getLine("card8"));
+                GUIController.getInstance().displayChanceCard();
+                case8(player);
         }
     }
     private void case1(Player player) { //Move to start
@@ -62,5 +82,8 @@ public class Field_Chance extends Field {
             player.movePlayer(24-(player.getPosition())-10);
         //Execute landedOn(10)
     }
+
+    private void case7(Player player){}
+    private void case8(Player player){}
 }
 
