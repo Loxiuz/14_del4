@@ -1,6 +1,6 @@
 package game;
 
-public class Die
+public class Dice
 {
     /** Number of faces on the dice */
     private int m_faces;
