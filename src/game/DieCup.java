@@ -1,14 +1,17 @@
 public class DieCup {
 
-    private int diceSum = 0;
+    private final Die die1 = new Die();
+    private final Die die2 = new Die();
+    private int diceSum;
 
-    public void roll(int NUM_OF_DICE){
-
-        for(int i = 0; i < NUM_OF_DICE; i++){
-            diceSum = diceSum + (int)(Math.random()*6+1);
-        }
-
+    public void diceRoll(){
+        diceSum = die1.rollDie()
+                + die2.rollDie();
     }
 
-    public int getSum(){return diceSum;}
+    public int getSum(){
+        return diceSum;
+    }
+
+
 }
