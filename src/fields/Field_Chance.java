@@ -18,6 +18,7 @@ public class Field_Chance extends fields.Field {
     }
     /** Enacts a chosen chance card */
     public void chooseCard(Player player, int card) {
+
         switch (card) {
             case 1:
                 GUIController.getInstance().setChanceCard(Language.getLine("card1"));

@@ -1,19 +1,29 @@
 package game;
 
+
+import java.util.Arrays;
+
 public class DieCup {
 
-    private final Die die1 = new Die();
-    private final Die die2 = new Die();
+    final int MAX_DICE = 2;
+
+    final Die[] die = new Die[MAX_DICE];
+    final int[] dice = new int[MAX_DICE];
+
     private int diceSum;
 
     public void rollDice(){
-        diceSum = die1.rollDie()
-                + die2.rollDie();
+        for(int i = 0; i < MAX_DICE; i++){
+          dice[i] = die[i].rollDie();
+        }
+        diceSum = Arrays.stream(dice).sum();
     }
 
     public int getSum(){
         return diceSum;
     }
 
-
+    public int getEyes(int dieNr){
+        return dice[dieNr];
+    }
 }
