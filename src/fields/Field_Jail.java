@@ -2,7 +2,7 @@ package fields;
 
 import game.Player;
 
-public class Field_Jail extends Field
+public class Field_Jail extends fields.Field
 {
 	/** Moves the player straight to the jail and takes 1$ from them */
 	@Override

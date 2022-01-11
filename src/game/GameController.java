@@ -2,7 +2,6 @@ package game;
 
 import java.util.ArrayList;
 
-import fields.*;
 import fields.Field;
 import fields.Field_Chance;
 import fields.Field_Ownable;
@@ -35,13 +34,13 @@ public class GameController
         fields.add(new fields.Field_Chance());
         fields.add(new fields.Field_Ownable(2));
         fields.add(new fields.Field_Ownable(2));
-        fields.add(new Field_Parking());
+        fields.add(new fields.Field_Parking());
         fields.add(new fields.Field_Ownable(3));
         fields.add(new fields.Field_Ownable(3));
         fields.add(new fields.Field_Chance());
         fields.add(new fields.Field_Ownable(3));
         fields.add(new fields.Field_Ownable(3));
-        fields.add(new Field_Jail());
+        fields.add(new fields.Field_Jail());
         fields.add(new fields.Field_Ownable(4));
         fields.add(new fields.Field_Ownable(4));
         fields.add(new Field_Chance());
@@ -105,10 +104,11 @@ public class GameController
 
     private void addPlayers()
     {
-        String numberOfPlayers[] = new String[3];
-        numberOfPlayers[0] = "2";
-        numberOfPlayers[1] = "3";
-        numberOfPlayers[2] = "4";
+        String numberOfPlayers[] = new String[4];
+        numberOfPlayers[0] = "3";
+        numberOfPlayers[1] = "4";
+        numberOfPlayers[2] = "5";
+        numberOfPlayers[3] = "6";
         int selectedNumberOfPlayers = Integer.parseInt(game.GUIController.getInstance()
                 .getUserSelection(game.Language.getLine("select_number_of_players"), numberOfPlayers));
         int startBalance = selectedNumberOfPlayers == 2 ? 20

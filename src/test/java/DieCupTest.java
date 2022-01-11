@@ -22,8 +22,6 @@ class DieCupTest {
 
         while( rolls < MAX_ROLLS ) {
 
-            dieCup.roll(2);
-
             for (int i = 0; i < DICE_SUMS; i++){
 
                 if(dieCup.getSum() == i + 1){

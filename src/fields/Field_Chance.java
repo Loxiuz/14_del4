@@ -4,7 +4,7 @@ import game.GUIController;
 import game.Language;
 import game.Player;
 
-public class Field_Chance extends Field {
+public class Field_Chance extends fields.Field {
 
     /** Draws and enacts a random chance card */
     @Override

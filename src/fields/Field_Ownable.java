@@ -2,7 +2,7 @@ package fields;
 
 import game.Player;
 
-public class Field_Ownable extends Field
+public class Field_Ownable extends fields.Field
 {
 	protected Player m_fieldOwner = null;
 	protected int m_rent;

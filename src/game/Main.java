@@ -1,8 +1,6 @@
 package game;
 
-import gui_fields.GUI_Board;
 import gui_fields.GUI_Field;
-import gui_fields.GUI_Start;
 import gui_main.GUI;
 
 import java.awt.*;

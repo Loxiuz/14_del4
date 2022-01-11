@@ -50,7 +50,6 @@ public final class GUIController {
         GUI.setChanceCard(Language.getLine("card_none"));
         return GUI;
 
-
     }
 
     // Static method to create instance of GUI
