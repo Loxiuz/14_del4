@@ -20,7 +20,7 @@ public class GameController
 
     private void playGame()
     {
-        game.Dice dice = new game.Dice(6);
+        DieCup dieCup = new DieCup();
         ArrayList<fields.Field> fields = new ArrayList<>();
         fields.add(new fields.Field_Start());
         fields.add(new fields.Field_Ownable(1));
@@ -55,8 +55,8 @@ public class GameController
                         .getUserButtonPressed(
                                 player.getName() + " " + game.Language.getLine("your_turn"),
                                 game.Language.getLine("roll_dice"));
-                game.GUIController.getInstance().setDie(dice.rollDice());
-                player.movePlayer(dice.getShowingFace());
+                game.GUIController.getInstance().setDie(dieCup.getSum());
+                player.movePlayer(dieCup.getSum());
                 Field field = fields.get(player.getPosition());
                 fields.Field_Ownable nearby = null;
                 if (field instanceof fields.Field_Ownable)

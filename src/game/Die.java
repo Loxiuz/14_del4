@@ -1,3 +1,5 @@
+package game;
+
 public class Die {
 
     public int rollDie(){

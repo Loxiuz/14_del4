@@ -1,10 +1,12 @@
+package game;
+
 public class DieCup {
 
     private final Die die1 = new Die();
     private final Die die2 = new Die();
     private int diceSum;
 
-    public void diceRoll(){
+    public void rollDice(){
         diceSum = die1.rollDie()
                 + die2.rollDie();
     }
