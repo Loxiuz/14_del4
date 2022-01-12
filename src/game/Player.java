@@ -12,12 +12,12 @@ import gui_fields.GUI_Player;
 
 public class Player
 {
-    private String m_name;
+    private final String m_name;
     /** The GUI instance of the player */
-    private GUI_Player m_guiPlayer;
-    private game.Account m_account;
+    private final GUI_Player m_guiPlayer;
+    private final game.Account m_account;
     private int m_posistion = 0;
-    private String m_playerID = UUID.randomUUID().toString();
+    private final String m_playerID = UUID.randomUUID().toString();
     private Color m_color;
 
     /** Initializes a new player */
@@ -54,7 +54,7 @@ public class Player
         return m_guiPlayer;
     }
 
-    public int movePlayer(int fields)
+    public void movePlayer(int fields)
     {
         GUI_Field[] guiFields = game.GUIController.getInstance().getFields();
         for (int i = 0; i < fields; i++)
@@ -75,7 +75,6 @@ public class Player
             {
             }
         }
-        return m_posistion;
     }
 
     public int getPosition()
@@ -83,13 +82,12 @@ public class Player
         return m_posistion;
     }
 
-    public int setPosition(int position)
+    public void setPosition(int position)
     {
         GUI_Field[] guiFields = game.GUIController.getInstance().getFields();
         guiFields[m_posistion].setCar(m_guiPlayer, false);
         m_posistion = position;
         guiFields[m_posistion].setCar(m_guiPlayer, true);
-        return m_posistion;
     }
 
     public String getID()

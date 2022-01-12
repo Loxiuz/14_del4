@@ -7,7 +7,7 @@ public class Account
     /** The account balance */
     private int m_balance = 0;
     /** The GUI_Player instance */
-    private GUI_Player m_guiPlayer;
+    private final GUI_Player m_guiPlayer;
 
     /**
      * Constructor initializes account
@@ -82,15 +82,7 @@ public class Account
 
     public void setBal(int balance)
     {
-        if (balance < 0)
-        {
-            m_balance = 0;
-        }
-
-        else
-        {
-            m_balance = balance;
-        }
+        m_balance = Math.max(balance, 0);
         m_guiPlayer.setBalance(m_balance);
     }
 }

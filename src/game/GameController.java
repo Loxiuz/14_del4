@@ -10,7 +10,7 @@ import fields.Field_Start;
 public class GameController
 {
     /** Player list */
-    private ArrayList<game.Player> m_players = new ArrayList<>();
+    private final ArrayList<game.Player> m_players = new ArrayList<>();
 
     public GameController()
     {
@@ -104,7 +104,7 @@ public class GameController
 
     private void addPlayers()
     {
-        String numberOfPlayers[] = new String[4];
+        String[] numberOfPlayers = new String[4];
         numberOfPlayers[0] = "3";
         numberOfPlayers[1] = "4";
         numberOfPlayers[2] = "5";
