@@ -2,12 +2,9 @@ package game;
 
 public class ChanceDeck {
 
-    public ChanceDeck(){
+    public ChanceDeck(int card){
 
-        int randomNr = (int)(Math.random()*36+1);
-
-        ChanceCard(randomNr);
-        switch(randomNr){
+        switch(card){
             case 1:
             case 2:
             case 3:
@@ -47,6 +44,12 @@ public class ChanceDeck {
         }
 
 
+    }
+
+    public void drawChance(){
+        int randomNr = (int)(Math.random()*36+1);
+        ChanceCard(randomNr);
+        new ChanceDeck(randomNr);
     }
 
     private void ChanceCard(int cardNr){
