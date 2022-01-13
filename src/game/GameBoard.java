@@ -2,6 +2,8 @@ package game;
 
 import fields.*;
 import game.Player;
+import org.apache.commons.lang3.ArrayUtils;
+
 import java.util.Arrays;
 
 public class GameBoard {
@@ -51,19 +53,4 @@ public class GameBoard {
         fields[39] = new Field_Ownable(100);
 
     }
-
-    Player.getPosition();
-        public Field getField(int field) {
-            return GameBoard.fields[field];
-        }
-    }
-
-
-
-
-
-
-
-
-
-
+}

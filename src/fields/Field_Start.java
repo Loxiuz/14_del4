@@ -7,7 +7,7 @@ public class Field_Start extends Field
 	@Override
 	public void landedOn(Player player)
 	{
-		player.deposite(4000);
+		Account.deposit(4000);
 		System.out.println("you landed on GO, recieve 4000");
 	}
 	/*
@@ -18,11 +18,11 @@ public class Field_Start extends Field
 	 */
 	public void passStart(Player player){
 		if(player.getPosition() < player.movePlayer(player.getPosition())){
-			player.deposite(4000);
+			Account.deposit(4000);
 			System.out.println("you landed on GO, recieve 4000");
 		}
-		else{
-			if(player.getPosition() < player.movePlayer(player.getPosition([19]))){
+		else {
+			if (player.getPosition() < player.movePlayer(player.getPosition([19]))){
 		/* nothing will happen - the player is going to jail - array index 19 is jail -
 		and will not recieve those 4000 bucks.
 		 */
