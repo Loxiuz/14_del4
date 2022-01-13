@@ -43,7 +43,7 @@ public class ChanceDeck {
     }
 
     public void drawRandomChance(Player player){
-        chanceDeck(player, (int)(Math.random()*36+1));
+        chanceDeck(player, (int)(Math.random()*23+1));
     }
 
     private void ChanceCardDesc(int cardNr){
