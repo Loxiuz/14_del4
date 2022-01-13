@@ -2,6 +2,15 @@ package game;
 
 public class ChanceDeck {
 
+    public void drawRandomChance(Player player){
+        chanceDeck(player, (int)(Math.random()*23+1));
+    }
+
+    private void ChanceCardDesc(int cardNr){
+        GUIController.getInstance().setChanceCard(Language.getLine("card"+ cardNr));
+        GUIController.getInstance().displayChanceCard();
+    }
+
     public void chanceDeck(Player player, int card){
 
         ChanceCardDesc(card);
@@ -33,6 +42,12 @@ public class ChanceDeck {
         amount[21] = 500;
         amount[22] = 500;
 
+        //Rykke
+        switch(card){
+
+        }
+
+
         if(card <= 10){
             player.getAccount().withdraw(amount[card-1]);
         }
@@ -42,13 +57,6 @@ public class ChanceDeck {
 
     }
 
-    public void drawRandomChance(Player player){
-        chanceDeck(player, (int)(Math.random()*23+1));
-    }
 
-    private void ChanceCardDesc(int cardNr){
-        GUIController.getInstance().setChanceCard(Language.getLine("card"+ cardNr));
-        GUIController.getInstance().displayChanceCard();
-    }
 
 }
