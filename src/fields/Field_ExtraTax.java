@@ -2,10 +2,10 @@ package fields;
 
 import game.*;
 
-public class Field_Parking extends Field
-{
+public class Field_ExtraTax extends Field {
+
     @Override
     public void landedOn(Player player)
-    { // Do nothing
+    { player.getAccount().withdraw(2000);
     }
 }

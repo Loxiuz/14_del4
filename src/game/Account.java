@@ -1,96 +1,100 @@
 package game;
 
+import fields.*;
 import gui_fields.GUI_Player;
 
-public class Account
-{
-    /** The account balance */
-    private int m_balance = 0;
-    /** The GUI_Player instance */
+public class Account {
+
+    private int balance = 0;
     private GUI_Player m_guiPlayer;
 
-    /**
-     * Constructor initializes account
-     */
+//Constructor
 
     public Account(GUI_Player player)
     {
         m_guiPlayer = player;
     }
 
-    /**
-     * Make deposit to account.
-     */
+// acount's deposit
 
     public void deposit(int amount)
     {
-        if (m_balance + amount < 0)
+        if (balance + amount < 0)
         {
-            m_balance = 0;
+            balance = 0;
         }
         else
         {
-            m_balance += amount;
+            balance += amount;  // balance= balance+amount
         }
-        m_guiPlayer.setBalance(m_balance);
+        m_guiPlayer.setBalance(balance);
     }
 
-    /**
-     * Make withdrawal from account. Balance cannot be under 0.
-     */
-
+    // account's withdraw, when balance can not be 0
     public void withdraw(int amount)
     {
-        if (m_balance - amount < 0)
+        if (balance - amount < 0)
         {
-            m_balance = 0;
+            balance = 0;
         }
         else
         {
-            m_balance -= amount;
+            balance -= amount; // balance= balance - amount
         }
-        m_guiPlayer.setBalance(m_balance);
+        m_guiPlayer.setBalance(balance);
     }
 
-    /**
-     * Pay to another player. Balance cannot be 0.
-     */
+//  betales til anden spiller
 
-    public void payTo(Player player, int amount) {
-        if (m_balance > amount) {
-            m_balance -= amount;
+    public void payTo(Player player, int amount)
+    {
+        if (balance > amount) {
+            balance -= amount;
         }
         else {
-            m_balance = 0;
+            balance = 0;
         }
-        player.getAccount().m_balance += amount;
-        m_guiPlayer.setBalance(m_balance);
+        player.getAccount().balance += amount;
+        m_guiPlayer.setBalance(balance);
     }
 
-    /**
-     * Get balance of account
-     */
-
+    // get balance of account
     public int getBal()
     {
-        return m_balance;
+        return balance;
     }
 
-    /**
-     * Set balance of account
-     */
-
+    // set balance of account
     public void setBal(int balance)
     {
         if (balance < 0)
         {
-            m_balance = 0;
+            balance = 0;
         }
 
         else
         {
-            m_balance = balance;
+            balance = balance;
         }
-        m_guiPlayer.setBalance(m_balance);
+        m_guiPlayer.setBalance(balance);
+    }
+
+    public boolean hasFeildGroup(Field field)
+    {
+        return false;
+    }
+
+    public void builtHouse (Field field)
+    {
+
+    }
+
+    public boolean hasFeildGroupHouse (Field field)
+    {
+        return false;
+    }
+
+    public void builtHotel(Field feild)
+    {
     }
 }

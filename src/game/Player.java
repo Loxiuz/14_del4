@@ -16,7 +16,7 @@ public class Player
     /** The GUI instance of the player */
     private GUI_Player m_guiPlayer;
     private game.Account m_account;
-    private int m_posistion = 0;
+    private int m_position = 0;
     private String m_playerID = UUID.randomUUID().toString();
     private Color m_color;
 
@@ -59,14 +59,14 @@ public class Player
         GUI_Field[] guiFields = game.GUIController.getInstance().getFields();
         for (int i = 0; i < fields; i++)
         {
-            guiFields[m_posistion].setCar(m_guiPlayer, false);
-            m_posistion++;
-            if (m_posistion == guiFields.length)
+            guiFields[m_position].setCar(m_guiPlayer, false);
+            m_position++;
+            if (m_position == guiFields.length)
             {
-                m_posistion = 0;
+                m_position = 0;
                 m_account.deposit(2);
             }
-            guiFields[m_posistion].setCar(m_guiPlayer, true);
+            guiFields[m_position].setCar(m_guiPlayer, true);
             try
             {
                 Thread.sleep(250L);
@@ -75,21 +75,21 @@ public class Player
             {
             }
         }
-        return m_posistion;
+        return m_position;
     }
 
     public int getPosition()
     {
-        return m_posistion;
+        return m_position;
     }
 
     public int setPosition(int position)
     {
         GUI_Field[] guiFields = game.GUIController.getInstance().getFields();
-        guiFields[m_posistion].setCar(m_guiPlayer, false);
-        m_posistion = position;
-        guiFields[m_posistion].setCar(m_guiPlayer, true);
-        return m_posistion;
+        guiFields[m_position].setCar(m_guiPlayer, false);
+        m_position = position;
+        guiFields[m_position].setCar(m_guiPlayer, true);
+        return m_position;
     }
 
     public String getID()
@@ -130,5 +130,18 @@ public class Player
         }
         Player other = (Player) obj;
         return Objects.equals(m_playerID, other.m_playerID);
+    }
+
+    private int GOJC = 0; // number of get out of jail cards
+
+    public int getGOJC(){return GOJC;}
+
+    public void setGOJC(int GOJC){
+        this.GOJC = GOJC;
+    }
+
+    boolean isInJail = false;
+    public boolean getJailed() {
+        return isInJail = true;
     }
 }

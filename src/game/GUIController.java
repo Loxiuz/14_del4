@@ -17,33 +17,49 @@ public final class GUIController {
     private static GUI createGUI() {
 
         // Creates an array for the fields
-        GUI_Field[] fields = new GUI_Field[24];
+        GUI_Field[] fields = new GUI_Field[40];
 
         // Creates the fields
-        fields[0] = new GUI_Start(Language.getLine("f1_title"),Language.getLine("f1_subtext"),Language.getLine("f1_desc"), Color.ORANGE, Color.BLACK);
-        fields[1] = new GUI_Street(Language.getLine("f2_title"),Language.getLine("f2_subtext"),Language.getLine("f2_desc"),"", new Color(205,133,63), Color.BLACK);
-        fields[2] = new GUI_Street(Language.getLine("f3_title"),Language.getLine("f3_subtext"),Language.getLine("f3_desc"),"", new Color(205,133,63), Color.BLACK);
-        fields[3] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.YELLOW,Color.BLACK);
-        fields[4] = new GUI_Street(Language.getLine("f5_title"),Language.getLine("f5_subtext"),Language.getLine("f5_desc"),"", new Color(135,206,250), Color.BLACK);
-        fields[5] = new GUI_Street(Language.getLine("f6_title"),Language.getLine("f6_subtext"),Language.getLine("f6_desc"),"", new Color(135,206,250), Color.BLACK);
-        fields[6] = new GUI_Jail("default",Language.getLine("f7_title"),Language.getLine("f7_subtext"),Language.getLine("f7_desc"),Color.GRAY,Color.BLACK);
-        fields[7] = new GUI_Street(Language.getLine("f8_title"),Language.getLine("f8_subtext"),Language.getLine("f8_desc"),"", new Color(205,92,92), Color.BLACK);
-        fields[8] = new GUI_Street(Language.getLine("f9_title"),Language.getLine("f9_subtext"),Language.getLine("f9_desc"),"", new Color(205,92,92), Color.BLACK);
-        fields[9] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.YELLOW,Color.BLACK);
-        fields[10] = new GUI_Street(Language.getLine("f11_title"),Language.getLine("f11_subtext"),Language.getLine("f11_desc"),"", new Color(240,230,140), Color.BLACK);
-        fields[11] = new GUI_Street(Language.getLine("f12_title"),Language.getLine("f12_subtext"),Language.getLine("f12_desc"),"", new Color(240,230,140), Color.BLACK);
-        fields[12] = new GUI_Refuge("default",Language.getLine("f13_title"),Language.getLine("f13_subtext"),Language.getLine("f13_desc"),Color.PINK,Color.BLACK);
-        fields[13] = new GUI_Street(Language.getLine("f14_title"),Language.getLine("f14_subtext"),Language.getLine("f14_desc"),"", Color.RED, Color.BLACK);
-        fields[14] = new GUI_Street(Language.getLine("f15_title"),Language.getLine("f15_subtext"),Language.getLine("f15_desc"),"", Color.RED, Color.BLACK);
-        fields[15] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.YELLOW,Color.BLACK);
-        fields[16] = new GUI_Street(Language.getLine("f17_title"),Language.getLine("f17_subtext"),Language.getLine("f17_desc"),"", new Color(255,215,0), Color.BLACK);
-        fields[17] = new GUI_Street(Language.getLine("f18_title"),Language.getLine("f18_subtext"),Language.getLine("f18_desc"),"", new Color(255,215,0), Color.BLACK);
-        fields[18] = new GUI_Jail("default",Language.getLine("f19_title"),Language.getLine("f19_subtext"),Language.getLine("f19_desc"),Color.GRAY,Color.BLACK);
-        fields[19] = new GUI_Street(Language.getLine("f20_title"),Language.getLine("f20_subtext"),Language.getLine("f20_desc"),"", Color.GREEN, Color.BLACK);
-        fields[20] = new GUI_Street(Language.getLine("f21_title"),Language.getLine("f21_subtext"),Language.getLine("f21_desc"),"", Color.GREEN, Color.BLACK);
-        fields[21] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.YELLOW,Color.BLACK);
-        fields[22] = new GUI_Street(Language.getLine("f23_title"),Language.getLine("f23_subtext"),Language.getLine("f23_desc"),"", new Color(65,105,225), Color.BLACK);
-        fields[23] = new GUI_Street(Language.getLine("f24_title"),Language.getLine("f24_subtext"),Language.getLine("f24_desc"),"", new Color(65,105,225), Color.BLACK);
+        fields[0] = new GUI_Start(Language.getLine("fStart_title"),Language.getLine("fStart_subtext"),Language.getLine("fStart_desc"), Color.RED, Color.BLACK);
+        fields[1] = new GUI_Street(Language.getLine("fB1_title"),Language.getLine("fB1_subtext"),Language.getLine("fB1_desc"),"", Color.BLUE, Color.BLACK);
+        fields[2] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.BLACK,Color.WHITE);
+        fields[3] = new GUI_Street(Language.getLine("fB2_title"),Language.getLine("fB2_subtext"),Language.getLine("fB2_desc"),"", Color.BLUE, Color.BLACK);
+        fields[4] = new GUI_Tax(Language.getLine("fT1_title"),Language.getLine("fT1_subtext"),Language.getLine("fT1_desc"),Color.GREEN,Color.BLACK);
+        fields[5] = new GUI_Shipping("default", Language.getLine("fS1_title"), Language.getLine("fS1_subtext"), Language.getLine("fS1_desc"), "", new Color(135,206,250), Color.BLACK);
+        fields[6] = new GUI_Street(Language.getLine("fP1_title"),Language.getLine("fP1_subtext"),Language.getLine("fP1_desc"),"", Color.PINK, Color.BLACK);
+        fields[7] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.BLACK,Color.WHITE);
+        fields[8] = new GUI_Street(Language.getLine("fP2_title"),Language.getLine("fP2_subtext"),Language.getLine("fP2_desc"),"", Color.PINK,Color.BLACK);
+        fields[9] = new GUI_Street(Language.getLine("fP3_title"),Language.getLine("fP3_subtext"),Language.getLine("fP3_desc"),"", Color.PINK,Color.BLACK);
+        fields[10] = new GUI_Jail("default",Language.getLine("fJ1_title"),Language.getLine("fJ1_subtext"),Language.getLine("fJ1_desc"),Color.DARK_GRAY,Color.BLACK);
+        fields[11] = new GUI_Street(Language.getLine("fO1_title"),Language.getLine("fO1_subtext"),Language.getLine("fO1_desc"),"", Color.ORANGE, Color.BLACK);
+        fields[12] = new GUI_Brewery("default", Language.getLine("fBryg1_title"), Language.getLine("fBryg1_subtext"), Language.getLine("fBryg1_desc"), "",Color.CYAN, Color.BLACK);
+        fields[13] = new GUI_Street(Language.getLine("fO2_title"),Language.getLine("fO2_subtext"),Language.getLine("fO2_desc"),"", Color.ORANGE, Color.BLACK);
+        fields[14] = new GUI_Street(Language.getLine("fO3_title"),Language.getLine("fO3_subtext"),Language.getLine("fO3_desc"),"", Color.ORANGE, Color.BLACK);
+        fields[15] = new GUI_Shipping("default", Language.getLine("fS2_title"), Language.getLine("fS2_subtext"), Language.getLine("fS2_desc"), "", new Color(135,206,250), Color.BLACK);
+        fields[16] = new GUI_Street(Language.getLine("fG1_title"),Language.getLine("fG1_subtext"),Language.getLine("fG1_desc"),"", Color.LIGHT_GRAY, Color.BLACK);
+        fields[17] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.BLACK,Color.WHITE);
+        fields[18] = new GUI_Street(Language.getLine("fG2_title"),Language.getLine("fG2_subtext"),Language.getLine("fG2_desc"),"", Color.LIGHT_GRAY, Color.BLACK);
+        fields[19] = new GUI_Street(Language.getLine("fG3_title"),Language.getLine("fG3_subtext"),Language.getLine("fG3_desc"),"", Color.LIGHT_GRAY, Color.BLACK);
+        fields[20] = new GUI_Refuge("default",Language.getLine("fPark_title"),Language.getLine("fPark_subtext"),Language.getLine("fPark_desc"),Color.GREEN,Color.BLACK);
+        fields[21] = new GUI_Street(Language.getLine("fR1_title"),Language.getLine("fR1_subtext"),Language.getLine("fR1_desc"),"", Color.RED, Color.BLACK);
+        fields[22] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.BLACK,Color.WHITE);
+        fields[23] = new GUI_Street(Language.getLine("fR2_title"),Language.getLine("fR2_subtext"),Language.getLine("fR2_desc"),"", Color.RED, Color.BLACK);
+        fields[24] = new GUI_Street(Language.getLine("fR3_title"),Language.getLine("fR3_subtext"),Language.getLine("fR3_desc"),"", Color.RED, Color.BLACK);
+        fields[25] = new GUI_Shipping("default", Language.getLine("fS3_title"), Language.getLine("fS3_subtext"), Language.getLine("fS3_desc"), "", new Color(135,206,250), Color.BLACK);
+        fields[26] = new GUI_Street(Language.getLine("fW1_title"),Language.getLine("fW1_subtext"),Language.getLine("fW1_desc"),"", Color.WHITE, Color.BLACK);
+        fields[27] = new GUI_Street(Language.getLine("fW2_title"),Language.getLine("fW2_subtext"),Language.getLine("fW2_desc"),"", Color.WHITE, Color.BLACK);
+        fields[28] = new GUI_Brewery("default", Language.getLine("fBryg2_title"), Language.getLine("fBryg2_subtext"), Language.getLine("fBryg2_desc"), "",Color.CYAN, Color.BLACK);
+        fields[29] = new GUI_Street(Language.getLine("fW3_title"),Language.getLine("fW3_subtext"),Language.getLine("fW3_desc"),"", Color.WHITE, Color.BLACK);
+        fields[30] = new GUI_Jail(Language.getLine("fJ2_title"),Language.getLine("fJ2_subtext"),Language.getLine("fJ2_desc"),"", Color.DARK_GRAY,Color.BLACK);
+        fields[31] = new GUI_Street(Language.getLine("fY1_title"),Language.getLine("fY1_subtext"),Language.getLine("fY1_desc"),"", Color.YELLOW, Color.BLACK);
+        fields[32] = new GUI_Street(Language.getLine("fY2_title"),Language.getLine("fY2_subtext"),Language.getLine("fY2_desc"),"", Color.YELLOW, Color.BLACK);
+        fields[33] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.BLACK,Color.WHITE);
+        fields[34] = new GUI_Street(Language.getLine("fY3_title"),Language.getLine("fY3_subtext"),Language.getLine("fY3_desc"),"", Color.YELLOW, Color.BLACK);
+        fields[35] = new GUI_Shipping("default", Language.getLine("fS4_title"), Language.getLine("fS4_subtext"), Language.getLine("fS4_desc"), "", new Color(135,206,250), Color.BLACK);
+        fields[36] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.BLACK,Color.WHITE);
+        fields[37] = new GUI_Street(Language.getLine("fPur1_title"),Language.getLine("fPur1_subtext"),Language.getLine("fPur1_desc"),"", Color.MAGENTA, Color.BLACK);
+        fields[38] = new GUI_Tax(Language.getLine("fT2_title"),Language.getLine("fT2_subtext"),Language.getLine("fT2_desc"),Color.GREEN,Color.BLACK);
+        fields[39] = new GUI_Street(Language.getLine("fPur2_title"),Language.getLine("fPur2_subtext"),Language.getLine("fPur2_desc"),"", Color.MAGENTA, Color.BLACK);
 
         //Creates the board based on the specified array
         GUI GUI = new GUI(fields);

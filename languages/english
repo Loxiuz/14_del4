@@ -1,0 +1,117 @@
+fStart_title:Start
+fStart_subtext:Start her.
+fStart_desc:Du modtager 200 kr. når du passere start.
+fB1_title:Rødovrevej
+fB1_subtext:Pris: 60 kr.
+fB1_desc:Leje: 20 kr.
+fC_title:<html><b><font size="7">?
+fC_subtext:Prøv lykken
+fC_desc:Ta' et chancekort.
+fB2_title:Hvidovrevej
+fB2_subtext:Pris: 60 kr.
+fB2_desc:Leje: 20 kr.
+fT1_title:Indkomstskat
+fT1_subtext:Betal indkomstskat
+fT1_desc:Pris: 200 kr.
+fS1_title:Øresund\nA/S
+fS1_subtext:Pris: 200 kr.
+fS1_desc:Leje: 75 kr.
+fP1_title:Roskildevej
+fP1_subtext:Pris: 100 kr.
+fP1_desc:Leje: 40 kr.
+fP2_title:Valby\nLanggade
+fP2_subtext:Pris: 100 kr.
+fP2_desc:Leje: 40 kr.
+fP3_title:Allégade
+fP3_subtext:Pris: 120 kr.
+fP3_desc:Leje: 45 kr.
+fJ1_title:<html><b><font size="7">X
+fJ1_subtext:I fængsel
+fJ1_desc:På besøg
+fO1_title:Frederiks-\nberg Allé
+fO1_subtext:Pris: 140 kr.
+fO1_desc:Leje: 50 kr.
+fBryg1_title:Tuborg
+fBryg1_subtext:Pris: 150 kr.
+fBryg1_desc:55 kr.
+fO2_title:Bülowsvej
+fO2_subtext:Pris: 140 kr.
+fO2_desc:Leje: 50 kr.
+fO3_title:Gl. Kongevej
+fO3_subtext:Pris: 140 kr.
+fO3_desc:Leje: 50 kr.
+fS2_title:A/S Grenå-\nHundested\nFærgefart
+fS2_subtext:Pris: 200 kr.
+fS2_desc:Leje: 75 kr.
+fG1_title:Bernstorffs-\nvej
+fG1_subtext:Pris: 180 kr.
+fG1_desc:Leje: 60 kr.
+fG2_title:Hellerupvej
+fG2_subtext:Pris: 180 kr.
+fG2_desc:Leje: 60 kr.
+fG3_title:Strandvejen
+fG3_subtext:Pris: 180 kr.
+fG3_desc:Leje: 60 kr.
+fPark_title:
+fPark_subtext:Parkering
+fPark_desc:Ta' en pause
+fR1_title:Trianglen
+fR1_subtext:Pris: 220 kr.
+fR1_desc:Leje: 70 kr.
+fR2_title:Østerbro-\ngade
+fR2_subtext:Pris: 220 kr.
+fR2_desc:Leje: 70 kr.
+fR2_title:Grønningen
+fR2_subtext:Pris: 240 kr.
+fR2_desc:Leje: 80 kr.
+fS3_title:Molslinjen\nA/S
+fS3_subtext:Pris: 200 kr.
+fS3_desc:Leje: 75 kr.
+fW1_title:Bredgade
+fW1_subtext:Pris: 260 kr.
+fW1_desc:Leje: 80 kr.
+fW2_title:Kgs. Nytorv
+fW2_subtext:Pris: 260 kr.
+fW2_desc:Leje: 80 kr.
+fBryg2_title:Carlsberg
+fBryg2_subtext:Pris: 150 kr.
+fBryg2_desc:55 kr.
+fW3_title:Østergade
+fW3_subtext:Pris: 280 kr.
+fW3_desc:Leje: 85 kr.
+fJ2_title:<html><b><font size="7">X
+fJ2_subtext:Gå i fængsel
+fJ2_desc:Slå to ens for at komme ud
+fY1_title:Amagertorv
+fY1_subtext:Pris: 300 kr.
+fY1_desc:Leje: 95 kr.
+fY2_title:Vimmel-\nskaftet
+fY2_subtext:Pris: 300 kr.
+fY2_desc:Leje: 95 kr.
+fY3_title:Nygade
+fY3_subtext:Pris: 320 kr.
+fY3_desc:Leje: 100 kr.
+fS4_title:Skandinavisk\nLinietrafik\nA/S
+fS4_subtext:Pris: 200 kr.
+fS4_desc:Leje: 75 kr.
+fPur1_title:Frederiks-\nberggade
+fPur1_subtext:Pris: 350 kr.
+fPur1_desc:Leje: 120 kr.
+fT1_title:Ekstra-\nordinær\nstatsskat
+fT1_subtext:Betal ekstraordinær\nstatsskat
+fT1_desc:Betal 100 kr.
+fPur2_title:Rådhuspladsen
+fPur2_subtext:Pris: 400 kr.
+fPur2_desc:Leje: 150 kr.
+card_none:No chance cards have been drawn yet.
+card1:Move to start and earn 2$
+card2:Pay the bank 2$
+card3:The bank pays you 2$
+your_turn:it's your turn
+roll_dice:Roll dice
+winner_is:Winner is
+select_number_of_players:Select number of players
+player:Player
+enter_name:enter name
+close_game:Close game
+choose_lang:Choose language

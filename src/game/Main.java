@@ -13,14 +13,14 @@ public class Main
     public static void main(String[] args)
     {
         setLanguage();
-        new game.GameController();
+        new GameController();
     }
 
     private static void setLanguage()
     {
         GUI chooseLanguage = new GUI(new GUI_Field[0],new Color(51, 204, 0));
-        String[] languages = game.Language.getLanguages();
-        game.Language.setLanguage(chooseLanguage.getUserSelection(game.Language.getLine("choose_lang"), languages));
+        String[] languages = Language.getLanguages();
+        Language.setLanguage(chooseLanguage.getUserSelection(Language.getLine("choose_lang"), languages));
         chooseLanguage.close();
     }
 }

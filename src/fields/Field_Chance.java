@@ -1,8 +1,6 @@
 package fields;
 
-import game.GUIController;
-import game.Language;
-import game.Player;
+import game.*;
 
 public class Field_Chance extends Field {
 

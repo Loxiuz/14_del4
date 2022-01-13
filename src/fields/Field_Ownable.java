@@ -1,6 +1,6 @@
 package fields;
 
-import game.Player;
+import game.*;
 
 public class Field_Ownable extends Field
 {
@@ -64,5 +64,15 @@ public class Field_Ownable extends Field
 				player.getAccount().payTo(getOwner(), m_rent);
 			}
 		}
+
+	{ // getPosition([19]) == jail position
+		if (nearby != null && getOwner().equals(nearby.getOwner()) && !getOwner().getPosition()
+		{
+			player.getAccount().payTo(getOwner(), m_rent );
+		}
+		else {
+			//do nothing
+		}
 	}
+}
 }
