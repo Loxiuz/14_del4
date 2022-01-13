@@ -1,0 +1,75 @@
+f1_title:Start
+f1_subtext:Start here
+f1_desc:Pass start to earn 2$
+f2_title:Burger bar
+f2_subtext: 1$
+f2_desc:Pay 1$ to the bank. If the burger bar is already owned, pay the owner instead.
+f3_title:Pizzaria
+f3_subtext:1$
+f3_desc:Pay 1$ to the bank. If the pizzaria is already owned, pay the owner instead.
+f5_title:Candy shop
+f5_subtext:1$
+f5_desc:Pay 1$ to the bank. If the candy shop is already owned, pay the owner instead.
+f6_title:Icecream stand
+f6_subtext:1$
+f6_desc:Pay 1$ to the bank. If the icecream stand is already owned, pay the owner instead.
+f7_title:Jail
+f7_subtext:Visiting jail
+f7_desc:You are just visiting. Take a break.
+f8_title: Museum
+f8_subtext:2$
+f8_desc:Pay 2$ to the bank. If the museum is already owned, pay the owner instead.
+f9_title: Library
+f9_subtext:2$
+f9_desc: Pay 2$ to the bank. If the library is already owned, pay the owner instead.
+f11_title: Skater park
+f11_subtext:2$
+f11_desc: Pay 2$ to the bank. If the skater park is already owned, pay the owner instead.
+f12_title: Swimming pool
+f12_subtext:2$
+f12_desc: Pay 2$ to the bank. If the swimming pool is already owned, pay the owner instead.
+f13_title: Parking
+f13_subtext: Parking lot
+f13_desc:Take a break.
+f14_title: Game hall
+f14_subtext:3$
+f14_desc: Pay 3$ to the bank. If the game hall is already owned, pay the owner instead.
+f15_title: Cinema
+f15_subtext:3$
+f15_desc:Pay 3$ to the bank. If the cinema is already owned, pay the owner instead.
+f17_title: Toy store
+f17_subtext:3$
+f17_desc: Pay 3$ to the bank. If the toy store is already owned, pay the owner instead.
+f18_title: Pet shop
+f18_subtext:3$
+f18_desc: Pay 3$ to the bank. If the pet shop is already owned, pay the owner instead.
+f19_title: Go to jail
+f19_subtext: Go to jail
+f19_desc:Go straight to jail and pay 1$. You don't get paid for passing Start.
+f20_title: Bowling hall
+f20_subtext:4$
+f20_desc: Pay 4$ to the bank. If the bowling hall is already owned, pay the owner instead.
+f21_title: Zoo
+f21_subtext:4$
+f21_desc: Pay 4$ to the bank. If the zoo is already owned, pay the owner instead.
+f23_title: Water park
+f23_subtext:5$
+f23_desc: Pay 5$ to the bank. If the water park is already owned, pay the owner instead.
+f24_title: The waterfront
+f24_subtext:5$
+f24_desc: Pay 5$ to the bank. If the waterfront is already owned, pay the owner instead.
+fC_title:<html><b><font size="7">?
+fC_subtext:Chance
+fC_desc:Draw a Chance card
+card_none:No chance cards have been drawn yet.
+card1:Move to start and earn 2$
+card2:Pay the bank 2$
+card3:The bank pays you 2$
+your_turn:it's your turn
+roll_dice:Roll dice
+winner_is:Winner is
+select_number_of_players:Select number of players
+player:Player
+enter_name:enter name
+close_game:Close game
+choose_lang:Choose language
