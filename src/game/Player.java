@@ -141,7 +141,7 @@ public class Player
     }
 
     boolean isInJail = false;
-    public boolean getJailed() {
-        return isInJail = true;
+    public void getJailed() {
+        isInJail = true;
     }
 }

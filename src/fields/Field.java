@@ -8,8 +8,8 @@ public abstract class Field
 	{
 	}
 
-	protected static Field get(int position) {
-
+	public Field getField(int position){
+		return new GameController().fields[position];
 	}
 
 	// All field subclasses must have a landedOn method

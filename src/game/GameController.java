@@ -9,6 +9,7 @@ public class GameController {
 
     /** Player list */
     private ArrayList<Player> m_players = new ArrayList<>();
+    public final Field[] fields = new Field[40];
 
     public GameController() {
         addPlayers();
@@ -17,7 +18,7 @@ public class GameController {
 
     private void playGame() {
         DieCup dice = new DieCup();
-        Field[] fields = new Field[40];
+
         fields[0] = new Field_Start();
         fields[1] = new Field_Ownable(100);
         fields[2] = new Field_Chance();
@@ -114,7 +115,7 @@ public class GameController {
 
     private void addPlayers()
     {
-        String numberOfPlayers[] = new String[4];
+        String[] numberOfPlayers = new String[4];
         numberOfPlayers[0] = "3";
         numberOfPlayers[1] = "4";
         numberOfPlayers[2] = "5";

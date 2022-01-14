@@ -23,10 +23,10 @@ DieCup dice = new DieCup();
 		while(player.getPosition()==19){
     if(player.getGOJC() > 0){
         // player gets to roll dice, business as usual
-        game.Language.getLine("you're free, roll_dice"));
+        game.Language.getLine("you're free, roll_dice");
         game.GUIController.getInstance().setDie(dice.getSum());
         player.movePlayer(dice.getSum());
-        Field field = fields.Field.get(player.getPosition());
+        Field field = getField(player.getPosition());
     }
     else{ // player will try to get equal eyes, and move accordingly
         for (int attemps = 0; attemps <= 2; attemps ++){
@@ -42,7 +42,7 @@ DieCup dice = new DieCup();
                 game.Language.getLine("you're free,roll_dice");
                 game.GUIController.getInstance().setDie(dice.getSum());
                 player.movePlayer(dice.getSum());
-                Field field = Field(player.getPosition());
+                Field field = getField(player.getPosition());
             }
 
         }
