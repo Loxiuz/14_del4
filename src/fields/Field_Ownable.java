@@ -66,12 +66,9 @@ public class Field_Ownable extends Field
 		}
 
 	{ // getPosition([19]) == jail position
-		if (nearby != null && getOwner().equals(nearby.getOwner()) && !getOwner().getPosition())
+		if (nearby != null && getOwner().equals(nearby.getOwner()) && getOwner().getPosition() != 10)
 		{
 			player.getAccount().payTo(getOwner(), m_rent );
-		}
-		else {
-			//do nothing
 		}
 	}
 }

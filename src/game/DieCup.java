@@ -6,14 +6,14 @@ public class DieCup {
 
         final int MAX_DICE = 2;
 
-        final Die[] die = new Die[MAX_DICE];
         final int[] dice = new int[MAX_DICE];
 
         private int diceSum;
 
         public void rollDice() {
             for (int i = 0; i < MAX_DICE; i++) {
-                dice[i] = die[i].rollDie();
+                dice[i] = (int)(Math.random()*6+1);
+
             }
             diceSum = Arrays.stream(dice).sum();
         }
@@ -23,6 +23,6 @@ public class DieCup {
         }
 
         public int getEyes ( int dieNr){
-            return dice[dieNr];
+            return dice[dieNr-1];
         }
     }

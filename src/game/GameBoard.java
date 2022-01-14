@@ -10,7 +10,7 @@ public class GameBoard {
 
     public GameBoard() {
 
-        Field fields[] = new Field[40];
+        Field[] fields = new Field[40];
         fields[0] = new Field_Start();
         fields[1] = new Field_Ownable(100);
         fields[2] = new Field_Chance();

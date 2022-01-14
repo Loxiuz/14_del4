@@ -64,7 +64,7 @@ public class Player
             if (m_position == guiFields.length)
             {
                 m_position = 0;
-                m_account.deposit(2);
+                m_account.deposit(4000);
             }
             guiFields[m_position].setCar(m_guiPlayer, true);
             try

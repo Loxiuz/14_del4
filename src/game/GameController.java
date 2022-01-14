@@ -69,8 +69,9 @@ public class GameController {
                                 player.getName() + " " + Language.getLine("your_turn"),
                                 Language.getLine("roll_dice"));
                 dice.rollDice();
-                GUIController.getInstance().setDie(dice.getSum());
+                GUIController.getInstance().setDice(dice.getEyes(1),dice.getEyes(2));
                 player.movePlayer(dice.getSum());
+
                 Field field = fields[ArrayUtils.indexOf(fields, player.getPosition())];
                 Field_Ownable nearby = null;
                 if (field instanceof Field_Ownable)
