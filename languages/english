@@ -115,3 +115,6 @@ player:Player
 enter_name:enter name
 close_game:Close game
 choose_lang:Choose language
+want_buy:do you want to buy this field?
+buy_field:Buy field
+dont_buy:Don't buy field

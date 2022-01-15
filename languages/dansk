@@ -115,3 +115,6 @@ player:Spiller
 enter_name:indtast navn
 close_game:Luk spillet
 choose_lang:Vælg sprog
+want_buy:vil du købe dette felt?
+buy_field:Køb felt
+dont_buy:Køb ikke felt
