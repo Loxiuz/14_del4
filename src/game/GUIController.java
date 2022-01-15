@@ -50,7 +50,7 @@ public final class GUIController {
         fields[27] = new GUI_Street(Language.getLine("fW2_title"),Language.getLine("fW2_subtext"),Language.getLine("fW2_desc"),"", Color.WHITE, Color.BLACK);
         fields[28] = new GUI_Brewery("default", Language.getLine("fBryg2_title"), Language.getLine("fBryg2_subtext"), Language.getLine("fBryg2_desc"), "",Color.CYAN, Color.BLACK);
         fields[29] = new GUI_Street(Language.getLine("fW3_title"),Language.getLine("fW3_subtext"),Language.getLine("fW3_desc"),"", Color.WHITE, Color.BLACK);
-        fields[30] = new GUI_Jail(Language.getLine("fJ2_title"),Language.getLine("fJ2_subtext"),Language.getLine("fJ2_desc"),"", Color.DARK_GRAY,Color.BLACK);
+        fields[30] = new GUI_Jail("default",Language.getLine("fJ2_title"),Language.getLine("fJ2_subtext"),Language.getLine("fJ2_desc"),Color.DARK_GRAY,Color.BLACK);
         fields[31] = new GUI_Street(Language.getLine("fY1_title"),Language.getLine("fY1_subtext"),Language.getLine("fY1_desc"),"", Color.YELLOW, Color.BLACK);
         fields[32] = new GUI_Street(Language.getLine("fY2_title"),Language.getLine("fY2_subtext"),Language.getLine("fY2_desc"),"", Color.YELLOW, Color.BLACK);
         fields[33] = new GUI_Chance(Language.getLine("fC_title"),Language.getLine("fC_subtext"),Language.getLine("fC_desc"),Color.BLACK,Color.WHITE);

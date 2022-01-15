@@ -1,16 +1,25 @@
 package game;
 
-import fields.*;
-import game.Player;
-import org.apache.commons.lang3.ArrayUtils;
-
-import java.util.Arrays;
+import fieldpack.*;
 
 public class GameBoard {
+    private Field[] fields;
+    private int size;
+    int field;
+
+    public int Stack(int size) {
+        this.size = size;
+        return size;
+    }
+
+    public Field getField(int field) {
+        this.field = field;
+        return fields[field];
+    }
 
     public GameBoard() {
-
-        Field fields[] = new Field[40];
+        Stack(40);
+        fields = new Field[40];
         fields[0] = new Field_Start();
         fields[1] = new Field_Ownable(100);
         fields[2] = new Field_Chance();
@@ -52,5 +61,7 @@ public class GameBoard {
         fields[38] = new Field_ExtraTax();
         fields[39] = new Field_Ownable(100);
 
+        Field jailField = fields[10];
     }
+
 }
