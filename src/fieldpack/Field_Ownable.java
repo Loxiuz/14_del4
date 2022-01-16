@@ -46,7 +46,6 @@ public class Field_Ownable extends Field {
 		{
 		}
 		if (nearby.getOwner() != player && nearby.getOwner() != null) {
-			m_rent = 100000000;
 			player.getAccount().withdraw(m_rent);
 			getOwner().getAccount().deposit(m_rent);
 			GUIController.getInstance().showMessage(player.getName() + " " + Language.getLine("pay") + " " + m_rent + " " + "kr." + " " + Language.getLine("to") + " " + getOwner().getName());
