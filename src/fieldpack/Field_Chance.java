@@ -36,7 +36,7 @@ public class Field_Chance extends Field {
         }
     }
     private void case1(Player player) { //Move to start
-        player.movePlayer(24-player.getPosition());
+        player.movePlayer(40-player.getPosition());
         GUIController.getInstance().displayChanceCard();
     }
     private void case2(Player player) { //Pay the bank 2$
