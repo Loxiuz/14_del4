@@ -5,10 +5,12 @@ import game.*;
 public class Field_Ownable extends Field {
 	protected Player m_fieldOwner = null;
 	protected int m_rent;
+	protected int m_price;
 
 	// Constructor
-	public Field_Ownable(int rent) {
+	public Field_Ownable(int price, int rent) {
 		m_rent = rent;
+		m_price = price;
 	}
 
 	public void setOwner(Player player) {
@@ -38,9 +40,10 @@ public class Field_Ownable extends Field {
 	public void landedOn(Player player, Field_Ownable nearby) {
 		if (getOwner() == player) // Do nothing
 		{
-		} else // Buy amusement
+		}
+		else // Buy amusement
 		{
-			player.getAccount().withdraw(m_rent);
+			player.getAccount().withdraw(m_price);
 			if (player.getAccount().getBal() > 0) {
 				setOwner(player);
 			}
@@ -53,7 +56,7 @@ public class Field_Ownable extends Field {
 				}
 			}
 
-			{ // getPosition([19]) == jail position
+			{ // getPosition([10]) == jail position
 				if (getOwner().getJailed()) {
 				} else {
 					player.getAccount().payTo(getOwner(), m_rent);

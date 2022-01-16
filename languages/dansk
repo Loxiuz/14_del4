@@ -2,111 +2,111 @@ fStart_title:Start
 fStart_subtext:Start her.
 fStart_desc:200 kr. når du passere start.
 fB1_title:Rødovrevej
-fB1_subtext:60 kr.
-fB1_desc:20 kr.
+fB1_subtext:1.200 kr.
+fB1_desc:50 kr.
 fC_title:<html><b><font size="7">?
 fC_subtext:Prøv lykken
 fC_desc:Ta' et chancekort.
 fB2_title:Hvidovrevej
-fB2_subtext:60 kr.
-fB2_desc:20 kr.
+fB2_subtext:1.200 kr.
+fB2_desc:50 kr.
 fT1_title:Indkomstskat
 fT1_subtext:Betal indkomstskat
-fT1_desc:200 kr.
+fT1_desc:4000 kr.
 fS1_title:Øresund\nA/S
-fS1_subtext:200 kr.
-fS1_desc:75 kr.
+fS1_subtext:4.000 kr.
+fS1_desc:500 kr.
 fP1_title:Roskildevej
-fP1_subtext:100 kr.
-fP1_desc:40 kr.
+fP1_subtext:2.000 kr.
+fP1_desc:100 kr.
 fP2_title:Valby\nLanggade
-fP2_subtext:100 kr.
-fP2_desc:40 kr.
+fP2_subtext:2.000 kr.
+fP2_desc:100 kr.
 fP3_title:Allégade
-fP3_subtext:120 kr.
-fP3_desc:45 kr.
+fP3_subtext:2.400 kr.
+fP3_desc:150 kr.
 fJ1_title:<html><b><font size="7">X
 fJ1_subtext:I fængsel
 fJ1_desc:På besøg
 fO1_title:Frederiks-\nberg Allé
-fO1_subtext:140 kr.
-fO1_desc:50 kr.
+fO1_subtext:2.800 kr.
+fO1_desc:200 kr.
 fBryg1_title:Tuborg
-fBryg1_subtext:150 kr.
-fBryg1_desc:55 kr.
+fBryg1_subtext:3.000 kr.
+fBryg1_desc:225 kr.
 fO2_title:Bülowsvej
-fO2_subtext:140 kr.
-fO2_desc:50 kr.
+fO2_subtext:2.800 kr.
+fO2_desc:200 kr.
 fO3_title:Gl. Kongevej
-fO3_subtext:140 kr.
-fO3_desc:50 kr.
+fO3_subtext:3.200 kr.
+fO3_desc:250 kr.
 fS2_title:A/S Grenå-\nHundested\nFærgefart
-fS2_subtext:200 kr.
-fS2_desc:75 kr.
+fS2_subtext:4.000 kr.
+fS2_desc:500 kr.
 fG1_title:Bernstorffs-\nvej
-fG1_subtext:180 kr.
-fG1_desc:60 kr.
+fG1_subtext:3.600 kr.
+fG1_desc:300 kr.
 fG2_title:Hellerupvej
-fG2_subtext:180 kr.
-fG2_desc:60 kr.
+fG2_subtext:3.600 kr.
+fG2_desc:300 kr.
 fG3_title:Strandvejen
-fG3_subtext:180 kr.
-fG3_desc:60 kr.
+fG3_subtext:4.000 kr.
+fG3_desc:350 kr.
 fPark_title:
 fPark_subtext:Parkering
 fPark_desc:Ta' en pause
 fR1_title:Trianglen
-fR1_subtext:220 kr.
-fR1_desc:70 kr.
+fR1_subtext:4.400 kr.
+fR1_desc:350 kr.
 fR2_title:Østerbro-\ngade
-fR2_subtext:220 kr.
-fR2_desc:70 kr.
+fR2_subtext:4.400 kr.
+fR2_desc:350 kr.
 fR3_title:Grønningen
-fR3_subtext:240 kr.
-fR3_desc:80 kr.
+fR3_subtext:4.800 kr.
+fR3_desc:400 kr.
 fS3_title:Molslinjen\nA/S
-fS3_subtext:200 kr.
-fS3_desc:75 kr.
+fS3_subtext:4.000 kr.
+fS3_desc:500 kr.
 fW1_title:Bredgade
-fW1_subtext:260 kr.
-fW1_desc:80 kr.
+fW1_subtext:5.200 kr.
+fW1_desc:450 kr.
 fW2_title:Kgs. Nytorv
-fW2_subtext:260 kr.
-fW2_desc:80 kr.
+fW2_subtext:5.200 kr.
+fW2_desc:450 kr.
 fBryg2_title:Carlsberg
-fBryg2_subtext:150 kr.
-fBryg2_desc:55 kr.
+fBryg2_subtext:3.000 kr.
+fBryg2_desc:225 kr.
 fW3_title:Østergade
-fW3_subtext:280 kr.
-fW3_desc:85 kr.
+fW3_subtext:5.600 kr.
+fW3_desc:500 kr.
 fJ2_title:<html><b><font size="7">X
 fJ2_subtext:Gå i fængsel
 fJ2_desc:Slå to ens for at komme ud
 fY1_title:Amagertorv
-fY1_subtext:300 kr.
-fY1_desc:95 kr.
+fY1_subtext:6.000 kr.
+fY1_desc:550 kr.
 fY2_title:Vimmel-\nskaftet
-fY2_subtext:300 kr.
-fY2_desc:95 kr.
+fY2_subtext:6.000 kr.
+fY2_desc:550 kr.
 fY3_title:Nygade
-fY3_subtext:320 kr.
-fY3_desc:100 kr.
+fY3_subtext:6.400 kr.
+fY3_desc:600 kr.
 fS4_title:Skandinavisk\nLinietrafik\nA/S
-fS4_subtext:200 kr.
-fS4_desc:75 kr.
+fS4_subtext:4.000 kr.
+fS4_desc:500 kr.
 fPur1_title:Frederiks-\nberggade
-fPur1_subtext:350 kr.
-fPur1_desc:120 kr.
+fPur1_subtext:7.000 kr.
+fPur1_desc:700 kr.
 fT2_title:Ekstra-\nordinær\nstatsskat
 fT2_subtext:Betal ekstraordinær\nstatsskat
-fT2_desc:100 kr.
+fT2_desc:2.000 kr.
 fPur2_title:Rådhuspladsen
-fPur2_subtext:400 kr.
-fPur2_desc:150 kr.
+fPur2_subtext:8.000 kr.
+fPur2_desc:1.000 kr.
 card_none:Der er ikke blevet trukket nogen chancekort endnu.
 card1:Ryk frem til start og modtag 4000
-card2:Betal banken 2$
-card3:Modtag 2$ fra banken
+card2:Betal banken 2000
+card3:Modtag 2000 fra banken
 your_turn:det er din tur
 roll_dice:Kast terninger
 winner_is:Vinderen er

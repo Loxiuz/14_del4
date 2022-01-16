@@ -52,29 +52,52 @@ public class GameController {
                 dice1.rollDice();
                 dice2.rollDice();
                 GUIController.getInstance().setDice(dice1.rollDice(), dice2.rollDice());
-                player.movePlayer(dice1.getShowingFace()+ dice2.getShowingFace());
+                player.movePlayer(dice1.getShowingFace() + dice2.getShowingFace());
                 Field field = board.getField(player.getPosition());
                 Field_Ownable nearby = null;
-                if (field instanceof Field_Ownable)
-                {
-                    if (board.getField(player.getPosition()) instanceof Field_Ownable)
-                    {
-                        GUIController.getInstance()
-                                .getUserButtonPressed(
-                                        player.getName() + " " + Language.getLine("want_buy"),
-                                        Language.getLine("buy_field"), Language.getLine("dont_buy"));
+                String buyMsg = player.getName() + " " + Language.getLine("want_buy");
+                String tButton = Language.getLine("buy_field");
+                String fButton = Language.getLine("dont_buy");
+                if (field instanceof Field_Ownable) {
+                    boolean buy = GUIController.getInstance().getUserLeftButtonPressed(buyMsg, tButton, fButton);
 
-                        ((Field_Ownable) field).landedOn(player);
+                    if (buy == true) {
+                            nearby = (Field_Ownable) board.getField(player.getPosition());
+                        ((Field_Ownable) field).landedOn(player, nearby);
+                    }
+
+                    else if (buy == false) {
+                        /* Do nothing */
                     }
                 }
+
                 if (field instanceof Field_GoToJail) {
                         if (board.getField(player.getPosition()) instanceof Field_GoToJail) {
                             player.getJailed();
                         }
                     }
-                else {
-                    field.landedOn(player);
+
+                if (field instanceof Field_Chance) {
+                    ((Field_Chance) field).landedOn(player);
+
                 }
+
+                if (field instanceof Field_ExtraTax) {
+                    ((Field_ExtraTax) field).landedOn(player);
+                }
+                if (field instanceof Field_Jail) {
+                    /* Do nothing */
+                }
+                if (field instanceof Field_Parking) {
+                    /* Do nothing */
+                }
+                if (field instanceof Field_Start) {
+                    ((Field_Start) field).passStart(player);
+                }
+                if (field instanceof Field_Tax) {
+                    ((Field_Tax) field).landedOn(player);
+                }
+
                 if (player.getAccount().getBal() == 0)
                 {
                     looser = true;
