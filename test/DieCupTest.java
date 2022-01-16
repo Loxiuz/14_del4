@@ -36,16 +36,13 @@ public class DieCupTest extends TestCase {
                     if (roll == i + 1) {
                         actual[i] += 1;
                     }
-
                 }
                 rolls++;
             }
-
             //Sammenligner resultaterne med forventet array
             //samt en tolerance
             assertArrayEquals(expected, actual, 100);
         }
-
     }
 
     /** Test for summen af terningerne, hvor der sørges for,
