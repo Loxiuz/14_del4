@@ -72,11 +72,11 @@ public class ChanceDeck {
         }
     }
 
-    private void case21(Player player){ // Player goes to jail.
+    private void case21(Player player){ // Spiller kommer i fængsel.
         player.setPosition(10);
         player.getJailed();
     }
-    private void case22(Player player){ // Player recieves GOJC.
+    private void case22(Player player){ // Spiller får et løsladelseskort.
         player.setGOJC(1 + player.getGOJC());
     }
     private void case23(Player player){ // Ryk frem til start
