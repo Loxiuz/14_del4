@@ -1,4 +1,4 @@
-import game.DieCup;
+import game.Dice;
 import junit.framework.TestCase;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -6,9 +6,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import java.util.Arrays;
 
-public class DieCupTest extends TestCase {
+public class DiceTest extends TestCase {
 
-    DieCup dieCup = new DieCup();
+    Dice dice = new Dice(6);
+    Dice dice1 = new Dice(6);
+    Dice dice2 = new Dice(6);
 
     /** Test af terninger hen over titusind kast,
      *  hvor der bliver optalt antallet af hver af de forskellige sider,
@@ -28,8 +30,8 @@ public class DieCupTest extends TestCase {
             //Antal kast
             while (rolls < 10000) {
 
-                dieCup.rollDice();
-                int roll = dieCup.getEyes(a + 1);
+                dice.rollDice();
+                int roll = dice.getShowingFace();
 
                 for (int i = 0; i < 6; i++) {
                     //Optælling af de forskellige sider på terningen
@@ -49,8 +51,9 @@ public class DieCupTest extends TestCase {
      *  at resultatet er indenfor de korrekte grænser (1-12) **/
     @Test
      void getSumTest(){
-        dieCup.rollDice();
-        int sum = dieCup.getSum();
+        dice1.rollDice();
+        dice2.rollDice();
+        int sum = dice1.getShowingFace() + dice2.getShowingFace();
         Assertions.assertTrue(sum > 0 && sum <= 12);
     }
 }

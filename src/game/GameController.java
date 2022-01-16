@@ -55,20 +55,10 @@ public class GameController {
                 player.movePlayer(dice1.getShowingFace() + dice2.getShowingFace());
                 Field field = board.getField(player.getPosition());
                 Field_Ownable nearby = null;
-                String buyMsg = player.getName() + " " + Language.getLine("want_buy");
-                String tButton = Language.getLine("buy_field");
-                String fButton = Language.getLine("dont_buy");
                 if (field instanceof Field_Ownable) {
-                    boolean buy = GUIController.getInstance().getUserLeftButtonPressed(buyMsg, tButton, fButton);
 
-                    if (buy == true) {
-                            nearby = (Field_Ownable) board.getField(player.getPosition());
-                        ((Field_Ownable) field).landedOn(player, nearby);
-                    }
-
-                    else if (buy == false) {
-                        /* Do nothing */
-                    }
+                    nearby = (Field_Ownable) board.getField(player.getPosition());
+                    ((Field_Ownable) field).landedOn(player, nearby);
                 }
 
                 if (field instanceof Field_GoToJail) {

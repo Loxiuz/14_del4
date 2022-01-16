@@ -10,5 +10,6 @@ public class Field_GoToJail extends Field
 	{
 		player.setPosition(10);
 		player.getJailed();
+		GUIController.getInstance().showMessage(player.getName() + " " + Language.getLine("jail"));
 	}
 }
