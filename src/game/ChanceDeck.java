@@ -2,7 +2,7 @@ package game;
 
 public class ChanceDeck {
 
-    int randomNr = (int) (Math.random() * 31 + 1);
+    int randomNr = (int) (Math.random() * 31);
     GameBoard gameBoard = new GameBoard();
     int field = 0;
 
@@ -102,7 +102,7 @@ public class ChanceDeck {
     }
 
     public void drawRandomCard(Player player){
-        chanceDeck(player, randomNr-1);
+        chanceDeck(player, randomNr);
     }
 
     public void cardDesc() {
