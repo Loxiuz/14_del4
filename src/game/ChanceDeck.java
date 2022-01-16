@@ -2,20 +2,12 @@ package game;
 
 public class ChanceDeck {
 
-    public void drawRandomChance(Player player) {
-        chanceDeck(player, (int) (Math.random() * 23));
-    }
-
-    private void ChanceCardDesc(int cardNr) {
-        GUIController.getInstance().setChanceCard(Language.getLine("card" + cardNr));
-        GUIController.getInstance().displayChanceCard();
-    }
+    int randomNr = (int) (Math.random() * 24 + 1);
 
     public void chanceDeck(Player player, int card) {
 
-        ChanceCardDesc(card);
-
         int[] amount = new int[23];
+
         //Betal:
         amount[2] = 1000;
         amount[3] = 300;
@@ -41,26 +33,37 @@ public class ChanceDeck {
         amount[22] = 500;
 
         if (card <= 10) {
-            player.getAccount().withdraw(amount[card - 1]);
-        } else {
-            player.getAccount().deposit(amount[card - 1]);
+            player.getAccount().withdraw(amount[card]);
         }
-
-        /*
-        switch (card) {
-
+        else if (card < 23) {
+            player.getAccount().deposit(amount[card]);
         }
-
-    private void case4(Player player) {
-        player.movePlayer(19 - player.getPosition());
-        //player goes to jail.
-
+        else{
+            switch (card) {
+                case 23: case23(player);
+                    break;
+                case 24: case24(player);
+                    break;
+            }
+        }
     }
 
-    private void case5(Player player) {
+    private void case24(Player player) {
         player.setGOJC(1 + player.getGOJC()); //player recieves GOJC.
     }
 
-         */
+    private void case23(Player player) {
+        player.movePlayer(19 - player.getPosition());
+        //player goes to jail.
+    }
+
+    public void drawRandomCard(Player player) {
+        chanceDeck(player, randomNr-1);
+    }
+
+    public void cardDesc() {
+        GUIController.getInstance().setChanceCard(Language.getLine("card" + randomNr));
+        GUIController.getInstance().displayChanceCard();
     }
 }
+
