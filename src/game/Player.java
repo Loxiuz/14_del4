@@ -20,7 +20,6 @@ public class Player {
     private int m_position = 0;
     private String m_playerID = UUID.randomUUID().toString();
     private Color m_color;
-    private Player m_player;
 
     /**
      * Initializes a new player

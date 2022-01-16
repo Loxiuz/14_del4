@@ -38,29 +38,28 @@ public class Field_Ownable extends Field {
 	 * Decides what happens when a player lands on an amusement depending on who owns it
 	 */
 	public void landedOn(Player player, Field_Ownable nearby) {
-		if (getOwner() == player) // Do nothing
+		String buyMsg = player.getName() + " " + Language.getLine("want_buy");
+		String tButton = Language.getLine("buy_field");
+		String fButton = Language.getLine("dont_buy");
+
+		if (nearby.getOwner() == player) // Do nothing
 		{
 		}
-		else // Buy amusement
-		{
-			player.getAccount().withdraw(m_price);
-			if (player.getAccount().getBal() > 0) {
+		if (nearby.getOwner() != player && nearby.getOwner() != null) {
+			m_rent = 100000000;
+			player.getAccount().withdraw(m_rent);
+			getOwner().getAccount().deposit(m_rent);
+			GUIController.getInstance().showMessage(player.getName() + " " + Language.getLine("pay") + " " + m_rent + " " + "kr." + " " + Language.getLine("to") + " " + getOwner().getName());
+		}
+
+		if (nearby.getOwner() != player && nearby.getOwner() != null && nearby.getOwner().getJailed()) { /* Do nothing */ } else if (nearby.getOwner() == null) {
+			boolean buy = GUIController.getInstance().getUserLeftButtonPressed(buyMsg, tButton, fButton);
+
+			if (buy) {
+				player.getAccount().withdraw(m_price);
 				setOwner(player);
-			}
-
-			{
-				if (nearby != null && getOwner().equals(nearby.getOwner())) {
-					player.getAccount().payTo(getOwner(), m_rent * 2);
-				} else {
-					player.getAccount().payTo(getOwner(), m_rent);
-				}
-			}
-
-			{ // getPosition([10]) == jail position
-				if (getOwner().getJailed()) {
-				} else {
-					player.getAccount().payTo(getOwner(), m_rent);
-				}
+			} else if (!buy) {
+				/* Do nothing */
 			}
 		}
 	}

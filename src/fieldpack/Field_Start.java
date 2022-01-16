@@ -18,7 +18,7 @@ public class Field_Start extends Field {
 	public void passStart(Player player) {
 		if (player.getPosition() < player.movePlayer(player.getPosition())) {
 			player.getAccount().deposit(4000);
-			System.out.println("you landed on GO, recieve 4000");
+			GUIController.getInstance().showMessage(player.getName() + " " + Language.getLine("pass_start"));
 		} else {
 			if (player.getPosition() < player.movePlayer(player.getPosition()) && player.getJailed()); {
 			}

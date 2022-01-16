@@ -114,6 +114,11 @@ choose_lang:Choose language
 want_buy:do you want to buy this field?
 buy_field:Buy field
 dont_buy:Don't buy field
+pay:pay
+to:to
+tax:pay tax
+jail:is in jail. Roll same eyes to get out.
+pass_start:has passed start. You receive 4.000 kr.
 
 card_none:No chance cards have been drawn yet.
 card1:Move to start and earn 4.000 kr.

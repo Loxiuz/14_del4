@@ -114,6 +114,11 @@ choose_lang:Vælg sprog
 want_buy:vil du købe dette felt?
 buy_field:Køb felt
 dont_buy:Køb ikke felt
+pay:betal
+to:til
+tax:betal skat
+jail:er i fængsel. Slå to ens for at komme ud.
+pass_start:har passeret start. Du modtager 4.000 kr.
 
 card_none:Der er ikke blevet trukket nogen chancekort endnu.
 card1:Ryk frem til start og modtag 4000 kr.
