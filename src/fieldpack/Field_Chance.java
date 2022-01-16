@@ -16,7 +16,7 @@ public class Field_Chance extends Field {
     /** Returns a random value between 1 and max */
 
     /** Enacts a chosen chance card */
- /*   public void chooseCard(Player player, int card) {
+    public void chooseCard(Player player, int card) {
         switch (card) {
             case 1:
                 GUIController.getInstance().setChanceCard(Language.getLine("card1"));
@@ -36,11 +36,11 @@ public class Field_Chance extends Field {
                 break;
         }
     }
-    private void case1(Player player) { //Move to start
+    private void case1(Player player) {
         player.movePlayer(40-player.getPosition());
         GUIController.getInstance().displayChanceCard();
     }
-    private void case2(Player player) { //Pay the bank 2$
+    private void case2(Player player) {
         player.getAccount().withdraw(2000);
     }
     private void case3(Player player) { // Recieve 2$ from the bank
@@ -60,6 +60,6 @@ public class Field_Chance extends Field {
         else
             player.movePlayer(24-(player.getPosition())-10);
         //Execute landedOn(10)
-    } */
+    }
 }
 

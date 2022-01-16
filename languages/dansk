@@ -103,10 +103,6 @@ fT2_desc:2.000 kr.
 fPur2_title:Rådhuspladsen
 fPur2_subtext:8.000 kr.
 fPur2_desc:1.000 kr.
-card_none:Der er ikke blevet trukket nogen chancekort endnu.
-card1:Ryk frem til start og modtag 4000 kr.
-card2:Betal banken 2000 kr.
-card3:Modtag 2000 kr. fra banken
 your_turn:det er din tur
 roll_dice:Kast terninger
 winner_is:Vinderen er
@@ -118,3 +114,27 @@ choose_lang:Vælg sprog
 want_buy:vil du købe dette felt?
 buy_field:Køb felt
 dont_buy:Køb ikke felt
+
+card_none:Der er ikke blevet trukket nogen chancekort endnu.
+card1:Ryk frem til start og modtag 4000 kr.
+card2:Betal banken 2000 kr.
+card3:Modtag 2000 kr. fra banken
+card4:hvad sker der her?
+card5:hvad sker der her?
+card6:hvad sker der her?
+card7:hvad sker der her?
+card8:hvad sker der her?
+card9:hvad sker der her?
+card10:hvad sker der her?
+card11:hvad sker der her?
+card12:hvad sker der her?
+card13:hvad sker der her?
+card14:hvad sker der her?
+card15:hvad sker der her?
+card16:hvad sker der her?
+card17:hvad sker der her?
+card18:hvad sker der her?
+card19:hvad sker der her?
+card20:hvad sker der her?
+card21:hvad sker der her?
+card22:hvad sker der her?
