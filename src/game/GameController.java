@@ -3,6 +3,7 @@ package game;
 import java.util.ArrayList;
 
 import fieldpack.*;
+import gui_main.GUI;
 import org.apache.commons.lang.ArrayUtils;
 
 import static javax.swing.UIManager.get;
@@ -37,7 +38,7 @@ public class GameController {
         }
     }
 
-    public void playGame() {
+    private void playGame() {
         Dice dice1 = new Dice(6);
         Dice dice2 = new Dice(6);
         String button;
@@ -49,52 +50,68 @@ public class GameController {
                         .getUserButtonPressed(
                                 player.getName() + " " + Language.getLine("your_turn"),
                                 Language.getLine("roll_dice"));
-                dice1.rollDice();
-                dice2.rollDice();
-                GUIController.getInstance().setDice(dice1.rollDice(), dice2.rollDice());
-                player.movePlayer(dice1.getShowingFace() + dice2.getShowingFace());
-                Field field = board.getField(player.getPosition());
-                Field_Ownable nearby = null;
-                if (field instanceof Field_Ownable) {
+                do {
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    GUIController.getInstance().setDice(dice1.rollDice(), dice2.rollDice());
+                    player.movePlayer(dice1.getShowingFace()+dice2.getShowingFace());
+                    Field field = board.getField(player.getPosition());
+                    Field_Ownable nearby = null;
 
-                    nearby = (Field_Ownable) board.getField(player.getPosition());
-                    ((Field_Ownable) field).landedOn(player, nearby);
-                }
+                        if (field instanceof Field_Ownable) {
+                            if (board.getField(player.getPosition()) instanceof Field_Ownable) {
 
-                if (field instanceof Field_GoToJail) {
-                        if (board.getField(player.getPosition()) instanceof Field_GoToJail) {
-                            player.getJailed();
+                                nearby = (Field_Ownable) board.getField(player.getPosition());
+                                ((Field_Ownable) field).landedOn(player, nearby);
+                            }
+                        }
+
+                        if (field instanceof Field_GoToJail) {
+                            if (board.getField(player.getPosition()) instanceof Field_GoToJail) {
+                                ((Field_GoToJail) field).landedOn(player);
+                            }
+                        }
+
+                        if (field instanceof Field_Chance) {
+                            if (board.getField(player.getPosition()) instanceof Field_Chance) {
+                                ((Field_Chance) field).landedOn(player);
+                            }
+                        }
+
+                        if (field instanceof Field_ExtraTax) {
+                            if (board.getField(player.getPosition()) instanceof Field_ExtraTax) {
+                                ((Field_ExtraTax) field).landedOn(player);
+                            }
+                        }
+                        if (field instanceof Field_Jail) {
+                            if (board.getField(player.getPosition()) instanceof Field_Jail) {
+                                ((Field_Jail) field).landedOn(player);
+                            }
+                        }
+
+                        if (field instanceof Field_Parking) {
+                            if (board.getField(player.getPosition()) instanceof Field_Parking) {
+                                ((Field_Parking) field).landedOn(player);
+                            }
+                        }
+                        if (field instanceof Field_Start) {
+                            if (board.getField(player.getPosition()) instanceof Field_Start) {
+                                ((Field_Start) field).landedOn(player);
+                            }
+                        }
+                        if (field instanceof Field_Tax) {
+                            if (board.getField(player.getPosition()) instanceof Field_Tax) {
+                                ((Field_Tax) field).landedOn(player);
+                            }
+                        }
+                        if (player.getAccount().getBal() == 0) {
+                            looser = true;
+                            break;
                         }
                     }
-
-                if (field instanceof Field_Chance) {
-                    ((Field_Chance) field).landedOn(player);
-
-                }
-
-                if (field instanceof Field_ExtraTax) {
-                    ((Field_ExtraTax) field).landedOn(player);
-                }
-                if (field instanceof Field_Jail) {
-                    /* Do nothing */
-                }
-                if (field instanceof Field_Parking) {
-                    /* Do nothing */
-                }
-                if (field instanceof Field_Start) {
-                    ((Field_Start) field).passStart(player);
-                }
-                if (field instanceof Field_Tax) {
-                    ((Field_Tax) field).landedOn(player);
-                }
-
-                if (player.getAccount().getBal() == 0)
-                {
-                    looser = true;
-                    break;
+                while (dice1.getShowingFace() == dice2.getShowingFace());
                 }
             }
-        }
         displayWinner();
     }
 

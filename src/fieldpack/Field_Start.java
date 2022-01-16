@@ -6,7 +6,7 @@ public class Field_Start extends Field {
 	@Override
 	public void landedOn(Player player) {
 		player.getAccount().deposit(4000);
-		System.out.println("you landed on GO, recieve 4000");
+		GUIController.getInstance().showMessage(player.getName() + " " + Language.getLine("pass_start"));
 	}
 
 	/*

@@ -57,7 +57,7 @@ public class Field_Ownable extends Field {
 			if (buy) {
 				player.getAccount().withdraw(m_price);
 				setOwner(player);
-			} else if (!buy) {
+			} else {
 				/* Do nothing */
 			}
 		}
