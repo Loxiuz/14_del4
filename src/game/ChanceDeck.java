@@ -3,6 +3,8 @@ package game;
 public class ChanceDeck {
 
     int randomNr = (int) (Math.random() * 24 + 1);
+    GameBoard gameBoard = new GameBoard();
+    int field = 0;
 
     public void chanceDeck(Player player, int card) {
 
@@ -44,20 +46,63 @@ public class ChanceDeck {
                     break;
                 case 24: case24(player);
                     break;
+                case 25: case25(player);
+                    break;
+                case 26: case26();
+                    break;
+                case 27: case27();
+                    break;
+                case 28: case28();
+                    break;
+                case 29: case29();
+                    break;
+                case 30: case30();
+                    break;
+                case 31: case31();
+                    break;
+                case 32: case32(player);
+                    break;
+                case 33: case33(player);
+                    break;
+            }
+            if (field > 0){
+                player.movePlayer(field - player.getPosition() - 1);
+                gameBoard.getField(field).landedOn(player);
             }
         }
     }
+    private void case23(Player player){ // Player goes to jail.
+        player.setPosition(10);
+        player.getJailed();
+    }
+    private void case24(Player player){ // Player recieves GOJC.
+        player.setGOJC(1 + player.getGOJC());
+    }
+    private void case25(Player player){ // Ryk frem til start
+        player.movePlayer(40 - player.getPosition());
+    }
+    private void case26(){field = 12;} // Ryk frem til Frederiksberg Allé
 
-    private void case24(Player player) {
-        player.setGOJC(1 + player.getGOJC()); //player recieves GOJC.
+    private void case27(){field = 16;} // Tag med Mols-Linien
+
+    private void case28(){field = 20;} //Ryk frem til Strandvejen
+
+    private void case29(){field = 25;} // Ryk frem til Grønningen
+
+    private void case30(){field = 33;} // Ryk frem til Vimmelskaftet
+
+    private void case31(){field = 40;} // Tag til Rådhuspladsen
+
+    private void case32(Player player){ // Ryk 3 felter frem
+        player.movePlayer(3);
+    }
+    private void case33(Player player){ // Ryk 3 felter tilbage
+        player.movePlayer(-3);
     }
 
-    private void case23(Player player) {
-        player.movePlayer(19 - player.getPosition());
-        //player goes to jail.
-    }
 
-    public void drawRandomCard(Player player) {
+
+    public void drawRandomCard(Player player){
         chanceDeck(player, randomNr-1);
     }
 

@@ -1,7 +1,6 @@
 package fieldpack;
 
 import game.*;
-import org.apache.commons.lang.ArrayUtils;
 
 public class Field_Jail extends Field
 {
