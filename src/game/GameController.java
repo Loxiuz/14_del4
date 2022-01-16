@@ -71,14 +71,13 @@ public class GameController {
                 dice.rollDice();
                 GUIController.getInstance().setDice(dice.getEyes(1),dice.getEyes(2));
                 player.movePlayer(dice.getSum());
-
-                Field field = fields[ArrayUtils.indexOf(fields, player.getPosition())];
+                Field field = fields[player.getPosition()-1];
                 Field_Ownable nearby = null;
                 if (field instanceof Field_Ownable)
                 {
-                    if (fields[ArrayUtils.indexOf(fields, player.getPosition() - 1)] instanceof Field_Ownable)
+                    if (fields[player.getPosition() - 1] instanceof Field_Ownable)
                     {
-                        nearby = (Field_Ownable) fields[ArrayUtils.indexOf(fields, player.getPosition() - 1)];
+                        nearby = (Field_Ownable) fields[player.getPosition() - 1];
                     }
                     else if (fields[ArrayUtils.indexOf(fields, player.getPosition() + 1)] instanceof Field_Ownable)
                     {

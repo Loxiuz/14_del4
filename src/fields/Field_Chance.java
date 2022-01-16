@@ -7,15 +7,16 @@ public class Field_Chance extends Field {
     /** Draws and enacts a random chance card */
     @Override
     public void landedOn(Player player) {
-        int draw = draw(3);
-        chooseCard(player, draw);
+        ChanceDeck card = new ChanceDeck();
+        card.drawRandomCard(player);
+        card.cardDesc();
     }
+
+
     /** Returns a random value between 1 and max */
-    public int draw(int max) {
-        return (int) ((Math.random() * max)+1);
-    }
+
     /** Enacts a chosen chance card */
-    public void chooseCard(Player player, int card) {
+ /*   public void chooseCard(Player player, int card) {
         switch (card) {
             case 1:
                 GUIController.getInstance().setChanceCard(Language.getLine("card1"));
@@ -59,6 +60,6 @@ public class Field_Chance extends Field {
         else
             player.movePlayer(24-(player.getPosition())-10);
         //Execute landedOn(10)
-    }
+    } */
 }
 

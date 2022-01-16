@@ -6,7 +6,7 @@ import gui_fields.GUI_Player;
 public class Account {
 
     private int balance = 0;
-    private GUI_Player m_guiPlayer;
+    private final GUI_Player m_guiPlayer;
 
 //Constructor
 
@@ -58,13 +58,6 @@ public class Account {
         m_guiPlayer.setBalance(balance);
     }
 
-    // get balance of account
-    public int getBal()
-    {
-        return balance;
-    }
-
-    // set balance of account
     public void setBal(int balance)
     {
         if (balance < 0)
@@ -72,12 +65,18 @@ public class Account {
             balance = 0;
         }
 
-        else
-        {
-            balance = balance;
-        }
+        this.balance = balance;
+
         m_guiPlayer.setBalance(balance);
     }
+    // get balance of account
+    public int getBal()
+    {
+        return balance;
+    }
+
+    // set balance of account
+
 
     public boolean hasFeildGroup(Field field)
     {
