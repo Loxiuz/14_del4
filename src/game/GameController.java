@@ -1,12 +1,6 @@
 package game;
 
-import java.util.ArrayList;
-
 import fieldpack.*;
-import gui_main.GUI;
-import org.apache.commons.lang.ArrayUtils;
-
-import static javax.swing.UIManager.get;
 
 public class GameController {
 
@@ -21,7 +15,7 @@ public class GameController {
     }
 
     private void addPlayers() {
-        String numberOfPlayers[] = new String[4];
+        String[] numberOfPlayers = new String[4];
         numberOfPlayers[0] = "3";
         numberOfPlayers[1] = "4";
         numberOfPlayers[2] = "5";
@@ -41,22 +35,53 @@ public class GameController {
     private void playGame() {
         Dice dice1 = new Dice(6);
         Dice dice2 = new Dice(6);
-        String button;
         GameBoard board = new GameBoard();
         boolean looser = false;
         while (!looser) {
             for (Player player : playerList) {
-                GUIController.getInstance()
-                        .getUserButtonPressed(
-                                player.getName() + " " + Language.getLine("your_turn"),
-                                Language.getLine("roll_dice"));
-                do {
-                    dice1.rollDice();
-                    dice2.rollDice();
-                    GUIController.getInstance().setDice(dice1.rollDice(), dice2.rollDice());
-                    player.movePlayer(dice1.getShowingFace()+dice2.getShowingFace());
-                    Field field = board.getField(player.getPosition());
-                    Field_Ownable nearby = null;
+
+                if (player.isInJail) {
+                    Dice jDice1 = new Dice(6);
+                    Dice jDice2 = new Dice(6);
+
+                    GUIController.getInstance()
+                            .getUserButtonPressed(
+                                    player.getName() + " " + Language.getLine("jail"),
+                                    Language.getLine("roll_dice"));
+                    jDice1.rollDice();
+                    jDice2.rollDice();
+                    GUIController.getInstance().setDice(jDice1.rollDice(), jDice2.rollDice());
+
+                    if (jDice1.getShowingFace() != jDice2.getShowingFace()) {
+                        player.setPosition(10);
+                        player.a++;
+
+                        if (player.a == 3) {
+                            player.getAccount().withdraw(1000);
+                            player.notJailed();
+                            player.a = 0;
+                        }
+                    }
+
+                    if (jDice1.getShowingFace() == jDice2.getShowingFace()) {
+                        player.notJailed();
+                        player.a = 0;
+                    }
+                }
+
+                if (!player.isInJail) {
+
+                    GUIController.getInstance()
+                            .getUserButtonPressed(
+                                    player.getName() + " " + Language.getLine("your_turn"),
+                                    Language.getLine("roll_dice"));
+                    do {
+                        dice1.rollDice();
+                        dice2.rollDice();
+                        GUIController.getInstance().setDice(dice1.rollDice(), dice2.rollDice());
+                        player.movePlayer(dice1.getShowingFace() + dice2.getShowingFace());
+                        Field field = board.getField(player.getPosition());
+                        Field_Ownable nearby;
 
                         if (field instanceof Field_Ownable) {
                             if (board.getField(player.getPosition()) instanceof Field_Ownable) {
@@ -68,40 +93,36 @@ public class GameController {
 
                         if (field instanceof Field_GoToJail) {
                             if (board.getField(player.getPosition()) instanceof Field_GoToJail) {
-                                ((Field_GoToJail) field).landedOn(player);
-                            }
-                        }
-
-                        if (field instanceof Field_Chance) {
-                            if (board.getField(player.getPosition()) instanceof Field_Chance) {
-                                ((Field_Chance) field).landedOn(player);
+                                field.landedOn(player);
+                                player.getJailed();
+                                player.setPosition(10);
                             }
                         }
 
                         if (field instanceof Field_ExtraTax) {
                             if (board.getField(player.getPosition()) instanceof Field_ExtraTax) {
-                                ((Field_ExtraTax) field).landedOn(player);
+                                field.landedOn(player);
                             }
                         }
                         if (field instanceof Field_Jail) {
                             if (board.getField(player.getPosition()) instanceof Field_Jail) {
-                                ((Field_Jail) field).landedOn(player);
+                                field.landedOn(player);
                             }
                         }
 
                         if (field instanceof Field_Parking) {
                             if (board.getField(player.getPosition()) instanceof Field_Parking) {
-                                ((Field_Parking) field).landedOn(player);
+                                field.landedOn(player);
                             }
                         }
                         if (field instanceof Field_Start) {
                             if (board.getField(player.getPosition()) instanceof Field_Start) {
-                                ((Field_Start) field).landedOn(player);
+                                field.landedOn(player);
                             }
                         }
                         if (field instanceof Field_Tax) {
                             if (board.getField(player.getPosition()) instanceof Field_Tax) {
-                                ((Field_Tax) field).landedOn(player);
+                                field.landedOn(player);
                             }
                         }
                         if (player.getAccount().getBal() == 0) {
@@ -109,9 +130,11 @@ public class GameController {
                             break;
                         }
                     }
-                while (dice1.getShowingFace() == dice2.getShowingFace());
+
+                    while (dice1.getShowingFace() == dice2.getShowingFace() && !player.isInJail);
                 }
             }
+        }
         displayWinner();
     }
 
@@ -123,6 +146,7 @@ public class GameController {
                 highestScore = player;
             }
         }
+        assert highestScore != null;
         game.GUIController.getInstance()
                 .getUserButtonPressed(game.Language.getLine("winner_is") + " " + highestScore.getName(),
                         game.Language.getLine("close_game"));

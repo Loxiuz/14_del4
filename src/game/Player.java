@@ -19,7 +19,6 @@ public class Player {
     private game.Account m_account;
     private int m_position = 0;
     private String m_playerID = UUID.randomUUID().toString();
-    private Color m_color;
 
     /**
      * Initializes a new player
@@ -49,10 +48,6 @@ public class Player {
 
     public game.Account getAccount() {
         return m_account;
-    }
-
-    public GUI_Player getGUIplayer() {
-        return m_guiPlayer;
     }
 
     public int movePlayer(int fields) {
@@ -85,16 +80,8 @@ public class Player {
         return m_position;
     }
 
-    public String getID() {
-        return m_playerID;
-    }
-
     public String getName() {
         return m_name;
-    }
-
-    public Color getColor() {
-        return m_color;
     }
 
     @Override
@@ -127,7 +114,9 @@ public class Player {
         this.GOJC = GOJC;
     }
 
-    boolean isInJail = false;
+    public boolean isInJail = false;
+
+    int a = 0;
 
     public boolean getJailed() {
         return isInJail = true;
@@ -135,5 +124,33 @@ public class Player {
 
     public boolean notJailed() {
         return isInJail = false;
+    }
+
+    public void setInJail(Player player) {
+        while (player.isInJail) {
+            player.setPosition(10);
+            for (int a = 0; a <= 2; a++) {
+                Dice dice1 = new Dice(6);
+                Dice dice2 = new Dice(6);
+                dice1.rollDice();
+                dice2.rollDice();
+                int diceSum = dice1.getShowingFace() + dice2.getShowingFace();
+                boolean isPair = dice1.getShowingFace() == dice2.getShowingFace();
+
+                if (!isPair) {
+                    /* Do nothing */
+                }
+                if (isPair) {
+                    player.notJailed();
+                    player.movePlayer(diceSum);
+                } else {
+                    player.notJailed();
+                    player.getAccount().withdraw(1000);
+                    dice1.rollDice();
+                    dice2.rollDice();
+                    player.movePlayer(diceSum);
+                }
+            }
+        }
     }
 }

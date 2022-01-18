@@ -5,7 +5,7 @@ import fieldpack.*;
 public class GameBoard {
     private Field[] fields;
     private int size;
-    int field;
+    private int field;
 
     public int Stack(int size) {
         this.size = size;

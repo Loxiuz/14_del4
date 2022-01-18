@@ -119,7 +119,9 @@ to:til
 tax:betal skat
 jail:er i fængsel. Slå to ens for at komme ud.
 pass_start:har passeret start. Du modtager 4.000 kr.
-
+visit_jail:er på besøg i fængslet.
+park:ta' en pause.
+in_jail:fængsles.
 card_none:Der er ikke blevet trukket nogen chancekort endnu.
 card0:De har kørt frem for “fuldt stop”, Betal 1000 kroner i bøde
 card1:Betal for vognvask og smøring kr 300
